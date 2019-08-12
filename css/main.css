@@ -98,27 +98,29 @@ textarea {
 html {
   height: 100%;
   width: 100%;
-  background: url(../img/desk-image.jpg) no-repeat center center fixed;
-  background-size:cover;
   font-size: 16px;
 }
 
 body {
-  height: 95%;
+  width: 100%;
   margin: 10px;
+  background-color: #ffc8b8;
   display:flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
 }
 
 /******************HEADER STYLES ***********/
-header h1, header h4 {
+  header h1, header h4 {
   padding: 0;
-  margin: 0
+  margin: 0;
   }
 
   header h1 {
     font-family: 'Lora', serif;
-    font-size: 4rem;
+    font-size: 4em;
     font-weight: bold;
     color: #731b30;
   }
@@ -126,34 +128,42 @@ header h1, header h4 {
   header h4 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.3em;
-    font-style: italic;
+    font-style: oblique;
+    width: 100%;
+    margin-bottom: 1em;
   }
 
   /*****************MAIN STYLES ************************/
   main {
-    height: 100%;
+    width: 100%;
+    margin:0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
   }
 
   /***************** ABOUT STYLES *********************/
   #about p {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
     background: rgba(214, 65, 97,0.5);
     color: #000000;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size:1.5rem;
-    line-height: 1.5em;
+    font-size:1.3em;
+    line-height: 1.7em;
     border-radius: 10px;
-    padding: 25px;
-    width: 450px;
   }
-
 /******************CONTACT STYLES ****************/
-#contact {
-  padding-right: 20px;
-}
+  #contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 
 #contact h3 {
   text-transform:capitalize;
@@ -176,10 +186,9 @@ header h1, header h4 {
   padding-right: 1em;
 }
 
-
 /**************Footer Styles ************/
 footer {
-  width:300px;
+  width: 80%;
   background: rgba(0,0,0,0.5);
   border-radius: 10px;
   display:flex;
@@ -200,6 +209,9 @@ footer p i {
   color: #d64161;
 }
 
+footer span {
+  visibility: hidden;
+}
 
  ==========================================================================
    Helper classes
@@ -281,9 +293,29 @@ footer p i {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #f0f8ff;
+  }
+
+  main {
+      flex-direction: row;
+  }
 }
+
+@media only screen and (min-width: 1200px) {
+  body {
+   background: url(../img/desk-image.jpg) no-repeat center center fixed;
+    background-size:cover;
+  }
+}
+
+
+
+/* About section
+padding: 25px; */
+/* width: 450px; */
+
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
