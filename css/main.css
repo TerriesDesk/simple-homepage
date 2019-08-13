@@ -183,7 +183,7 @@ body {
 #contact ul li a {
   color:#731b30;
   font-size: 2em;
-  padding-right: 1em;
+  padding: .5em;
 }
 
 /**************Footer Styles ************/
@@ -294,12 +294,17 @@ footer span {
    ========================================================================== */
 
 @media only screen and (min-width: 768px) {
-  body {
-    background-color: #f0f8ff;
+  main {
+    max-width:95%;
+    flex-direction: row;
+    align-content: space-around;
+    padding: 10px;
   }
 
-  main {
-      flex-direction: row;
+  #contact {
+    max-width: 25%;
+    flex-direction: row wrap;
+    text-align: center;
   }
 }
 
@@ -308,13 +313,45 @@ footer span {
    background: url(../img/desk-image.jpg) no-repeat center center fixed;
     background-size:cover;
   }
+
+  header {
+    align-self: flex-start;
+    margin-left: 15px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: flex-end;
+
+  }
+
+  #about {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: flex-end;
+    }
+
+  #about p {
+    margin: 0;
+    max-width: 30%;
+  }
+
+
+  #contact {
+    background: rgba(214, 65, 97,0.5);
+    border-radius: 10px;
+  }
+
+  footer {
+    align-self: flex-start;
+    margin-left: 15px;
+    max-width: 25%;
+  }
+
+  footer span {
+    visibility: visible;
+  }
 }
-
-
-
-/* About section
-padding: 25px; */
-/* width: 450px; */
 
 
 @media print,
